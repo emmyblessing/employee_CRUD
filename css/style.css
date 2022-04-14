@@ -1,0 +1,30 @@
+.nav-head {
+  background: #3d0101;
+  padding: 5px;
+}
+.nav-head a{
+  color: #ffffff;
+}
+.nav-head a:hover {
+  color: #f7caca;
+}
+
+.active {
+  background: #3d0101 !important;
+  color: #ffffff !important;
+}
+.bg-danger{
+  background: #fccfcf !important;
+  color: #000000 !important;
+  border-radius: 20px 0 20px 0;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, .2);
+}
+
+.bg-danger a{
+  color: #000000;
+}
+
+.pd{
+  padding: 20px 5px;
+}
+
