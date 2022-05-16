@@ -37,6 +37,7 @@
         $address = $row['address'];
         $state =  $row['state'];
         $id = $row['id'];
+        $uimage = $row['employee_image'];
       }
     }
   }

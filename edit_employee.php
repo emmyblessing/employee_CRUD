@@ -78,8 +78,12 @@
                 <input type="text" class="form-control" name="state" value="<?php echo $state ?>"/>
               </div>
             </div>
+            <div class="d-grid">
+              <label for="UploadFile" class="form-label">Upload Image:</label>
+              <input type="file" class="form-control" name="uimage" value="<?php echo $uimage ?>" required />
+            </div>
           </div>
-          <div class="d-grid">
+          <div class="d-grid mt-3">
             <button class="btn btn-danger" type="submit" name="update">Update Record</button>
           </div>
         </form>

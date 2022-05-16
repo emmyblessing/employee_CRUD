@@ -10,7 +10,6 @@
     $address = $_POST['address'];
     $state =  $_POST['state'];
 
-
     $target_dir = "uploads/";
     $uimage = $target_dir . basename($_FILES["uimage"]["name"]);
     $uploadOk = 1;
@@ -18,7 +17,7 @@
 
     // Check if image file is a actual image or fake image
     if(isset($_POST["submit"])) {
-      $check = getimagesize($_FILES["employee_image"]["tmp_name"]);
+      $check = getimagesize($_FILES["uimage"]["tmp_name"]);
       if($check !== false) {
         echo "File is an image - " . $check["mime"] . ".";
         $uploadOk = 1;
@@ -35,7 +34,7 @@
     }
 
     // Check file size
-    if ($_FILES["employee_image"]["size"] > 500000) {
+    if ($_FILES["uimage"]["size"] > 500000) {
       echo "Sorry, your file is too large.";
       $uploadOk = 0;
     }
@@ -52,13 +51,13 @@
       echo "Sorry, your file was not uploaded.";
     // if everything is ok, try to upload file
     } else {
-      if (move_uploaded_file($_FILES["employee_image"]["tmp_name"], $uimage)) {
-        echo "The file ". htmlspecialchars( basename( $_FILES["employee_image"]["name"])). " has been uploaded.";
+      if (move_uploaded_file($_FILES["uimage"]["tmp_name"], $uimage)) {
+        echo "The file ". htmlspecialchars( basename( $_FILES["uimage"]["name"])). " has been uploaded.";
       } else {
         echo "Sorry, there was an error uploading your file.";
       }
 
-
+      
     }
     
     $sql = "INSERT INTO `employee_tb` (`id`, `employee_id`, `first_name`, `last_name`, `phone`, `date_employed`, `status`, `address`, `state`, `employee_image`) VALUES (NULL, '$employee_id', '$firstname', '$lastname', '$phonenum', '$demployed', '$estatus', '$address', '$state', '$uimage')";
@@ -66,7 +65,7 @@
     $result = $db_connect->query($sql);
 
     if ($result == TRUE) {
-      header("Location: index.php");
+      header("Location: dashboard.php");
     } else {
       echo "Error:".$sql."<br>".$db_connect->error;
     }

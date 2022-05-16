@@ -15,7 +15,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
       <div class="d-flex">
-        <a class="nav-link" href=""> <?php echo $_SESSION['full_name']; ?> </a>
+        <a class="nav-link" href=""> <?php echo $_SESSION['email']; ?> </a>
         <a class="nav-link" href="logout.php">Logout <i class="fa fa-sign-out"></i></a>
       </div>
     </div>
