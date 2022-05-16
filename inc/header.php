@@ -16,5 +16,4 @@
         <link rel="stylesheet" href="./css/style.css" type="text/css" />
         <script src="https://kit.fontawesome.com/3bc6b391c7.js" crossorigin="anonymous"></script>
     </head>
-    
 <body>

@@ -37,8 +37,19 @@ CREATE TABLE IF NOT EXISTS `employee_tb` (
   `status` text NOT NULL,
   `address` text NOT NULL,
   `state` text NOT NULL,
+  `employee_image` text NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+DROP TABLE IF EXISTS `users_tb`;
+CREATE TABLE IF NOT EXISTS `users_tb` (
+  `user_id` int(11) NOT NULL AUTO_INCREMENT,
+  `full_name` text NOT NULL,
+  `role` text NOT NULL,
+  `email` text NOT NULL,
+  `password` text NOT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 

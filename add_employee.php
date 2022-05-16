@@ -78,6 +78,10 @@
             </div>
           </div>
           <div class="d-grid">
+            <label for="UploadFile" class="form-label">Upload Image:</label>
+            <input type="file" class="form-control" name="uimage" required />
+          </div>
+          <div class="d-grid mt-3">
             <button class="btn btn-danger" name="submit" type="submit">Submit Record</button>
           </div>
         </form>

@@ -28,3 +28,12 @@
   padding: 20px 5px;
 }
 
+.back{
+  background: #3d0101;
+  border-radius: 24px 0 24px 0;
+  box-shadow: 2px 5px 10px rgba(255, 0, 0, .5);
+}
+
+.back h3{
+  color: #ffffff;
+}
