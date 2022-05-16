@@ -8,11 +8,19 @@
 
   if (isset($_SESSION['user_id']) && isset($_SESSION['email'])) {
 ?>
-<ul class="nav-head">
-  <li class="nav-item">
+<nav class="navbar navbar-expand-lg nav-head">
+  <div class="container-fluid">
     <a class="nav-link" href="index.php"><i class="fa fa-user"></i> Employee Record System</a>
-  </li>
-</ul>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+      <div class="d-flex">
+        <a class="nav-link" href=""> <?php echo $_SESSION['full_name']; ?> </a>
+        <a class="nav-link" href="logout.php">Logout <i class="fa fa-sign-out"></i></a>
+      </div>
+    </div>
+  </div>
+</nav>
 <div class="container p-3">
   <div class="row">
     <div class="col-md-3">
